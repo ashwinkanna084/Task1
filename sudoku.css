@@ -49,13 +49,13 @@ hr{
 }
 
 .block p{
-  margin: 0;          /* remove default p margin */
-  font-size: 22px;    /* make keypad numbers bigger */
+  margin: 0;          
+  font-size: 22px;  
   font-weight: bold;
 }
 
 .block i{
-  font-size: 22px;    /* icon size */
+  font-size: 22px;
 }
 
 .cell{
@@ -64,7 +64,7 @@ hr{
     align-items: center;
     justify-content: center;
 
-   font-size: 28px;      /* bigger */
+   font-size: 28px;
    font-weight: bold;
  
    box-sizing: border-box;
@@ -78,7 +78,7 @@ hr{
     border-right: 3px solid;
 }
 .board .cell:hover {
-    outline: 3px solid blue;     /* instead of border */
+    outline: 3px solid blue;
   transform: scale(1.05);
   z-index: 2;
   box-shadow: 0 6px 14px rgba(0,0,0,0.25);
@@ -100,6 +100,7 @@ hr{
     gap: 18px;
     align-items: center;
 }
+
 
 
 
