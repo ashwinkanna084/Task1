@@ -1,0 +1,106 @@
+body{
+    background-color: skyblue;
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(9,50px);
+    grid-template-rows: repeat(9,50px);
+    background-color:white;
+    border: 3px solid;
+    width: fit-content;
+    margin: 20px auto;
+    margin-top: 20px;
+}
+.number{
+    display: grid;
+    grid-template-columns: repeat(7,50px);
+    grid-template-rows: repeat(2,50px);
+    background-color: white;
+    border: 3px solid;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin: 20px auto;
+}
+.block{
+    border: 2px solid;
+    text-align: center;
+    display: block;
+}
+h2{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+hr{
+    width: 40%;
+    background-color: black;
+}
+.error{
+    color: red;
+}
+.block{
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.block p{
+  margin: 0;          /* remove default p margin */
+  font-size: 22px;    /* make keypad numbers bigger */
+  font-weight: bold;
+}
+
+.block i{
+  font-size: 22px;    /* icon size */
+}
+
+.cell{
+    border: 1.5px solid #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   font-size: 28px;      /* bigger */
+   font-weight: bold;
+ 
+   box-sizing: border-box;
+   user-select: none;
+
+}
+.board .cell:nth-child(n+19):nth-child(-n+27),.board .cell:nth-child(n+46):nth-child(-n+54){
+    border-bottom: 3px solid;
+}
+.board .cell:nth-child(9n+3),.board .cell:nth-child(9n+6){
+    border-right: 3px solid;
+}
+.board .cell:hover {
+    outline: 3px solid blue;     /* instead of border */
+  transform: scale(1.05);
+  z-index: 2;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  background: #d9fdd3;
+  cursor: pointer;
+}
+.board .cell{
+     position: relative;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.hinted{
+  background: #fff4b3;
+}
+.fixed { background: #e6e6e6; font-weight: bold; }
+.selected { outline: 3px solid black; }
+.top{
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    align-items: center;
+}
+
+
+
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudoku</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body{
+      margin: 0;
+      background-color: skyblue;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container{
+      width: min(520px, 92vw);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    h1{
+      margin: 0;
+      text-align: center;
+    }
+
+    hr{
+      width: 100%;
+      border: 0;
+      border-top: 3px solid rgba(0,0,0,0.5);
+      margin: 0;
+    }
+
+    .rules{
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .box{
+      background-color: bisque;
+      border: 3px solid black;
+      border-radius: 10px;
+      padding: 18px;
+      min-height: 35vh;
+    }
+
+    .box-title{
+      margin: 0 0 14px 0;
+      text-align: center;
+      font-size: 22px;
+    }
+
+    .difficulty{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .difficulty label{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.55);
+      border: 2px solid rgba(0,0,0,0.2);
+      padding: 10px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .difficulty input{
+      transform: scale(1.2);
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sudoku</h1>
+    <hr>
+    <h2 class="rules">Rules:</h2><p>The goal is to fill empty cells with digits 1 through 9, ensuring each number appears exactly once in every row, column, and 3x3 box. No number can repeat within any row, column, or 3x3 subgrid. </p>
+
+    <div class="box">
+      <h2 class="box-title">Difficulty</h2>
+
+      <div class="difficulty">
+        <label>
+          <input type="radio" name="level" value="easy" checked>
+          <a href="sudoku.html">Easy</a>
+        </label>
+
+        <label>
+          <input type="radio" name="level" value="medium">
+          <a href="sudoku.html">Medium</a>
+        </label>
+
+        <label>
+          <input type="radio" name="level" value="hard">
+          <a href="sudoku.html">Hard</a>
+        </label>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
